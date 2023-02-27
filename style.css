@@ -1,179 +1,191 @@
-/* reset */
-/*
+ @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+ /* reset */
+ /*
   1. Use a more-intuitive box-sizing model.
 */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
 
-/*
+ /*
   2. Remove default margin
 */
-* {
-  margin: 0;
-}
+ * {
+   margin: 0;
+ }
 
-/*
+ /*
   3. Allow percentage-based heights in the application
 */
-html,
-body {
-  height: 100%;
-}
+ html,
+ body {
+   height: 100%;
+ }
 
-/*
+ /*
   Typographic tweaks!
   4. Add accessible line-height
   5. Improve text rendering
 */
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
+ body {
+   line-height: 1.5;
+   -webkit-font-smoothing: antialiased;
+ }
 
-/*
+ /*
   6. Improve media defaults
 */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
+ img,
+ picture,
+ video,
+ canvas,
+ svg {
+   display: block;
+   max-width: 100%;
+ }
 
-/*
+ /*
   7. Remove built-in form typography styles
 */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
+ input,
+ button,
+ textarea,
+ select {
+   font: inherit;
+ }
 
-/*
+ /*
   8. Avoid text overflows
 */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
+ p,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+   overflow-wrap: break-word;
+ }
 
-/*
+ /*
   9. Create a root stacking context
 */
-#root,
-#__next {
-  isolation: isolate;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+ #root,
+ #__next {
+   isolation: isolate;
+ }
 
 
 
-body {
-  font-family: 'Lato', sans-serif;
-}
 
-.flex {
-  display: flex;
-}
+ body {
+   font-family: 'Lato', sans-serif;
+ }
 
-.flex-wrap {
-  flex-wrap: wrap;
-}
+ .flex {
+   display: flex;
+ }
 
-.gap-2 {
-  column-gap: 5em;
-  row-gap: 1em;
-}
+ .flex-wrap {
+   flex-wrap: wrap;
+ }
+
+ .gap-2 {
+   column-gap: 5em;
+   row-gap: 1em;
+ }
 
 
 
-.h-full {
-  height: 100%;
-}
+ .h-full {
+   height: 100%;
+ }
 
-.hero {
-  width: 35%;
-  height: 100%;
-  background-color: green;
-}
+ .hero {
+   width: 35%;
+   height: 100%;
+   background-color: green;
+ }
 
-.main-section {
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgb(251, 253, 255);
-}
+ .main-section {
+   width: 65%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: rgb(251, 253, 255);
+ }
 
-.section {
-  width: 90%;
-  margin-inline: auto;
-}
+ .section {
+   width: 90%;
+   margin-inline: auto;
+ }
 
-.form-section {
-  padding-block: 2em;
-  background-color: white;
-  box-shadow: 0 4px 10px rgb(119 119 119 / 30%);
-}
+ .form-section {
+   padding-block: 2em;
+   background-color: white;
+   box-shadow: 0 4px 10px rgb(119 119 119 / 30%);
+ }
 
-.input-container {
-  flex-basis: 30%;
-}
+ .input-container {
+   flex-basis: 30%;
+ }
 
-.input-container+.input-container {
-  margin-left: 2px;
-}
+ .input-container+.input-container {
+   margin-left: 2px;
+ }
 
-.flavor-text {
-  margin-bottom: 2em;
-}
+ .flavor-text {
+   margin-bottom: 2em;
+ }
 
-p {
-  font-weight: bold;
-}
+ p {
+   font-weight: bold;
+ }
 
-.flavor-text p+p {
-  margin-top: 2em;
-}
+ .flavor-text p+p {
+   margin-top: 1em;
+ }
 
-label {
-  text-transform: uppercase;
-  display: block;
-  letter-spacing: 1.5px;
-  font-size: 12px;
-}
+ label {
+   text-transform: uppercase;
+   display: block;
+   letter-spacing: 1.5px;
+   font-size: 12px;
+ }
 
-input {
-  width: 100%;
-  font-weight: 400;
-}
+ input {
+   width: 100%;
+   font-weight: 400;
+ }
 
-button {
-  cursor: pointer;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  background-color: rgb(84, 110, 57);
-  color: white;
-  padding: .75em 1.5em;
-  font-weight: bold;
-  border-radius: 10px;
-  border-style: none;
-}
+ input[type="password"].pwd {
+   position: relative;
+ }
 
-a {
-  font-weight: bold;
-  text-decoration: none;
-  color: rgb(84, 110, 57);
-}
+ input[type="password"].pwd:invalid::after {
+   position: absolute;
+   content: "Soy inválido";
+   border: solid 1px red;
+   top: 10px;
+ }
+
+ button {
+   cursor: pointer;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   background-color: rgb(84, 110, 57);
+   color: white;
+   padding: .75em 1.5em;
+   font-weight: bold;
+   border-radius: 10px;
+   border-style: none;
+ }
+
+ a {
+   font-weight: bold;
+   text-decoration: none;
+   color: rgb(84, 110, 57);
+ }
